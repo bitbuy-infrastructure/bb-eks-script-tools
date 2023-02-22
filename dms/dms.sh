@@ -1,6 +1,6 @@
 #!/bin/bash
 ###
-# requeriments: bew install awscli , jq
+# requeriments: brew install awscli && brew install jq
 # config aws credentials for "OLD PROD account"
 #	[default] 
 #	aws_access_key_id = AKIA4JXxxxxxxxx
