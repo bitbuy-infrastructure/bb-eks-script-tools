@@ -16,7 +16,10 @@ cd dms
 old_master_pwd=''
 new_user_pwd=''
 # ex.: old_master_pwd='xxxx' new_user_pwd='yyy' ./dms.sh da bitbuy_stocks
-old_master_pwd='xxxx' new_user_pwd='yyy' ./dms.sh <end> <db_name> <optional_new_db_name> 
+# 1st parameter needs to be "da" | "qa" | "pd"
+# 2nd parameter needs to be exactly the database name to be copied.
+# 3rd parameter is optional if the new DN name will be different from the old DB name.
+old_master_pwd='xxxx' new_user_pwd='yyy' ./dms.sh <env> <db_name> <optional_new_db_name> 
 ```
 ---
 ### Logs output:
