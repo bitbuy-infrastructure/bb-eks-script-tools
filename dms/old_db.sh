@@ -6,7 +6,7 @@ if [ $1 == 'da' ]; then
 	replication_instance='dms-replication-instance-da'
 	rep_instance_arn='arn:aws:dms:us-east-2:845571256488:rep:V5IN2O5ZP6AIL2M7IPLZBY3266M3EXJFZGLZIJY'
 	migration_type='full-load'
-# QA - Stading
+# QA - Staging
 elif [ $1 == 'qa' ]; then
 	old_db_hostname='bmiexchange-qa.ckoxusslpepg.us-east-2.rds.amazonaws.com'
 	old_master_user='bmiexchange'

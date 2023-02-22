@@ -1,4 +1,5 @@
 load_input.sh
+log_dms.log
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
