@@ -149,7 +149,7 @@
         "InlineLobMaxSize": 0,
         "ParallelLoadQueuesPerThread": 0,
         "SupportLobs": true,
-        "LobChunkSize": 64,
+        "LobChunkSize": 2048,
         "TaskRecoveryTableEnabled": false,
         "ParallelLoadThreads": 0,
         "LobMaxSize": 0,
