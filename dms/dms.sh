@@ -52,7 +52,7 @@ done
 aws dms describe-connections --filter "Name=endpoint-arn,Values=$source_endpoint_arn,$target_endpoint_arn"
 log echo "Creating replication task..."
 aws dms create-replication-task --replication-task-identifier migrate-$1-postgres-db-to-aurora-`echo $2 | tr '_' '-'`-db --source-endpoint-arn $source_endpoint_arn --target-endpoint-arn $target_endpoint_arn \
---replication-instance-arn $rep_instance_arn --migration-type $migration_type --table-mappings file://table-mappings --replication-task-settings file://task-settings
+--replication-instance-arn $rep_instance_arn --migration-type $migration_type --table-mappings file://table-mappings --replication-task-settings $task_settings
 replication_task_arn=$(aws dms describe-replication-tasks --filters "Name= replication-task-id,Values=migrate-$1-postgres-db-to-aurora-`echo $2 | tr '_' '-'`-db" --query "ReplicationTasks[0].ReplicationTaskArn" --output text)
 log echo $replication_task_arn
 

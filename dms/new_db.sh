@@ -4,18 +4,21 @@ if [ -z $3 ]; then
 else
 	new_db_name=$3
 fi
+# default task settings:
+task_settings='file://task-settings'
 # DB and username
 if [ $new_db_name == "bitbuy_staking" ]; then
-    new_username='bb_89wSnt3a'
+    new_username='bitbuy_staking_user'
 fi
 if [ $new_db_name == "bitbuy_stocks" ]; then
-    new_username='stocks_user'
+    new_username='bitbuy_stocks_user'
 fi
 if [ $new_db_name == "bitbuy_api_accounts" ]; then
-    new_username='bitbuy_api_accounts_admin'
+    new_username='bitbuy_api_accounts_user'
+    task_settings='file://task-settings-api-accounts'
 fi
 if [ $new_db_name == "bitbuy_api_crypto" ]; then
-    new_username='bitbuy_api_crypto_admin'
+    new_username='bitbuy_api_crypto_user'
 fi
 # Teod
 if [ $1 == "da" ]; then
